@@ -12,6 +12,7 @@ const App = (props) => {
   const [showDetails, setShowDetails] = useState(false);
   const handleDepartment = (e) => {
     const result = e.target.value;
+    setShowDetails(false);
     if (result === "HR") {
       setEmployeeId(empId1);
     } else {
@@ -20,6 +21,7 @@ const App = (props) => {
     setDepartment(result);
   };
   const HandleIdChange = (e) => {
+    setShowDetails(false);
     setId(e.target.value);
   };
   const handleClick = () => {
@@ -76,7 +78,12 @@ const App = (props) => {
           <button onClick={ToggleDetails}>Clear</button>
         </Col>
       </Row>
-      {showDetails && <UserDetails id={id} />}
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}
+      >
+        {" "}
+        {showDetails && <UserDetails id={id} />}
+      </div>
     </Container>
   );
 };
