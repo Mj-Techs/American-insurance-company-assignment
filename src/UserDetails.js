@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Image } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import axios from "axios";
 const UserDetails = (props) => {
   const { id } = props;
