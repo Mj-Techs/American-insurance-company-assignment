@@ -43,7 +43,7 @@ const App = (props) => {
           <select
             value={department}
             onChange={handleDepartment}
-            style={{ width: "150px" }}
+            style={{ width: "150px", backgroundColor: "lightgrey" }}
           >
             <option value=""></option>
             {Departments.map((dept, i) => {
@@ -58,7 +58,10 @@ const App = (props) => {
         <Col>
           <label>Employee id:</label>
           <br />
-          <select onChange={HandleIdChange} style={{ width: "150px" }}>
+          <select
+            onChange={HandleIdChange}
+            style={{ width: "150px", backgroundColor: "lightgrey" }}
+          >
             <option></option>
             {employeeId.map((id) => {
               return (
@@ -79,9 +82,12 @@ const App = (props) => {
         </Col>
       </Row>
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "3rem",
+        }}
       >
-        {" "}
         {showDetails && <UserDetails id={id} />}
       </div>
     </Container>
